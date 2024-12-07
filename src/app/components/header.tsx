@@ -26,35 +26,37 @@ function Header (){
                 <li className="space-x-5 font-semibold">
                  <Link href={"/home"}>Home</Link>
                  <Link href={"/about"}>About</Link>
-                 <Link href={"]/contact"}>Contact</Link>
+                 <Link href={"/contact"}>Contact</Link>
                  <Link href={"/projects"}>Project</Link>
                  <button className="bg-white hover:bg-gray-400 text-black py-2 px-4 font-bold rounded-xl pr-4">Download CV</button>
                 </li>
             </ul>
             </div>
-<Sheet>
-<SheetTrigger className="text-xl md:hidden">
-<HiMenu/>
-</SheetTrigger>
+            <Sheet>
+  <SheetTrigger className="text-xl md:hidden">
+    <HiMenu />
+  </SheetTrigger>
   <SheetContent>
     <SheetHeader>
       <SheetTitle>SYEDA</SheetTitle>
-      <SheetDescription>
-        <div>
-      <ul>
-                <li className="flex flex-col gap-y-5 font-semibold text-black" >
-                 <Link href={"/home"}>Home</Link>
-                 <Link href={"/about"}>About</Link>
-                 <Link href={"/contact"}>Contact</Link>
-                 <Link href={"/projects"}>Project</Link>
-                 <button className="bg-black hover:bg-gray-400 text-white py-2 px-4 font-bold rounded-xl pr-4">Download CV</button>
-                </li>
-            </ul>
-            </div>
-      </SheetDescription>
+      {/* Avoid improper nesting by replacing SheetDescription with div */}
+      <div className="text-muted-foreground text-sm">
+        <ul>
+          <li className="flex flex-col gap-y-5 font-semibold text-black">
+            <Link href={"/home"}>Home</Link>
+            <Link href={"/about"}>About</Link>
+            <Link href={"/contact"}>Contact</Link>
+            <Link href={"/projects"}>Project</Link>
+            <button className="bg-black hover:bg-gray-400 text-white py-2 px-4 font-bold rounded-xl pr-4">
+              Download CV
+            </button>
+          </li>
+        </ul>
+      </div>
     </SheetHeader>
   </SheetContent>
 </Sheet>
+
 
         </header>
     )
